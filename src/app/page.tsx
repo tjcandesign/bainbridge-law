@@ -7,9 +7,9 @@ export default function Home() {
   return (
     <>
       <Hero
-        tag="Commercial Real Estate Law"
-        title="Experienced counsel for complex commercial real estate transactions."
-        subtitle="Serving clients in Lancaster County and across Pennsylvania with contract negotiation, due diligence, title review, and closing."
+        tag="Attorneys At Law"
+        title="Experienced counsel for complex transactions."
+        subtitle="Serving clients across Washington, DC, Maryland, and Virginia — from contract negotiation and due diligence to closing and beyond."
         actions={
           <>
             <Button href="/contact" variant="primary">
@@ -27,7 +27,7 @@ export default function Home() {
           <div className="split">
             <div>
               <span className="section-tag">What We Do</span>
-              <h2>A deliberate approach to commercial real estate law.</h2>
+              <h2>A deliberate approach to every transaction.</h2>
               <p>
                 We operate with the understanding that our best work is a
                 seamless transaction. Deals that close without surprise, terms
@@ -42,9 +42,9 @@ export default function Home() {
             <aside>
               <div className="aim-card">
                 <p className="pull-quote">
-                  Our aim is the highest quality result for every transaction —
+                  Our aim is the highest quality result for every matter —
                   assuring that clients are informed, comfortable through the
-                  process, and confident at closing.
+                  process, and confident at the close.
                 </p>
               </div>
             </aside>
@@ -68,9 +68,8 @@ export default function Home() {
             you.
           </h2>
           <p>
-            Bainbridge Law brings the rigor of complex commercial practice to
-            every matter — from a single lease review to a multi-property
-            acquisition.
+            Bainbridge Law brings the rigor of complex transactional practice
+            to every matter — across the District, Maryland, and Virginia.
           </p>
           <div style={{ marginTop: 36 }}>
             <Button href="/about" variant="outline">
