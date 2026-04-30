@@ -37,8 +37,8 @@ export default function Footer() {
           </div>
           <div className="footer-brand-name">Bainbridge Law</div>
           <p>
-            Experienced counsel for commercial real estate. The way transactions
-            ought to feel.
+            Experienced counsel for complex transactions across the DMV. The
+            way it ought to feel.
           </p>
         </div>
 
