@@ -5,10 +5,15 @@ import CtaBand from "../../components/CtaBand";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Bainbridge Law provides full-service commercial real estate counsel: contract negotiation, due diligence, title review, closing, leases, and entity formation.",
+    "Bainbridge Law provides full-service transactional counsel across the DMV: real estate, contracts, business matters, leases, and entity formation.",
 };
 
 const services = [
+  {
+    title: "Commercial & Residential Real Estate",
+    body:
+      "Acquisitions, dispositions, financing, and development across the DMV — for owners, investors, and businesses with property at stake.",
+  },
   {
     title: "Contract Negotiation & Drafting",
     body:
@@ -20,24 +25,19 @@ const services = [
       "Title, survey, zoning, environmental, and document review, organized so you can make decisions before the contingency period closes.",
   },
   {
-    title: "Title Review & Insurance",
+    title: "Title Review & Closing",
     body:
-      "We examine the title history, resolve defects before closing, and coordinate insurance coverage that protects your interest.",
+      "We examine the title history, resolve defects before closing, and coordinate every party so the transaction lands on schedule.",
   },
   {
-    title: "Closing & Settlement",
+    title: "Lease Drafting & Review",
     body:
-      "Coordination with lenders, title agents, and counterparties to bring the transaction to a clean, on-schedule close.",
+      "Commercial and residential leases for landlords and tenants — with a focus on the provisions that matter when something goes wrong.",
   },
   {
-    title: "Lease Review",
+    title: "Business & Entity Formation",
     body:
-      "Commercial lease drafting and review for landlords and tenants — with a focus on the provisions that matter when something goes wrong.",
-  },
-  {
-    title: "Entity Formation",
-    body:
-      "LLCs, partnerships, and operating agreements structured around how you actually intend to hold and operate the property.",
+      "LLCs, partnerships, and operating agreements structured around how you actually intend to hold and operate the business or property.",
   },
 ];
 
@@ -46,7 +46,7 @@ const reasons = [
   "Plain-spoken counsel without legalese",
   "Clear fee arrangements before work begins",
   "Prompt response on calls and emails",
-  "Local knowledge of Lancaster County practice",
+  "Practice across DC, Maryland, and Virginia",
   "Coordination with your lender, broker, and accountant",
 ];
 
@@ -57,7 +57,7 @@ export default function Services() {
         compact
         tag="Services"
         title="Our Services"
-        subtitle="Full-service commercial real estate counsel for buyers, sellers, landlords, tenants, and developers."
+        subtitle="Full-service transactional counsel for individuals, businesses, and investors across Washington, DC, Maryland, and Virginia."
       />
 
       <section className="section">
@@ -83,7 +83,7 @@ export default function Services() {
       <section className="section section-alt">
         <div className="section-inner narrow">
           <span className="section-tag">Why Clients Choose Us</span>
-          <h2>The way commercial counsel ought to feel.</h2>
+          <h2>The way counsel ought to feel.</h2>
           <p>
             Clients return to Bainbridge Law because the work is careful and the
             communication is clear. The list below reflects what we hear most.
