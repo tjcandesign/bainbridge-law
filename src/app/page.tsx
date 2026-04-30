@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <Hero
         tag="Commercial Real Estate Law"
-        title="Experienced counsel for complex<br/>commercial real estate transactions."
+        title="Experienced counsel for complex commercial real estate transactions."
         subtitle="Serving clients in Lancaster County and across Pennsylvania with contract negotiation, due diligence, title review, and closing."
         actions={
           <>
