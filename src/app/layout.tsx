@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: "%s | Bainbridge Law",
   },
   description:
-    "Experienced counsel for commercial real estate transactions across Lancaster County and the surrounding region.",
+    "Experienced counsel for complex transactions across Washington, DC, Maryland, and Virginia.",
 };
 
 export default function RootLayout({
