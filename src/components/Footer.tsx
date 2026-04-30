@@ -51,21 +51,21 @@ export default function Footer() {
 
         <div className="footer-col">
           <h5>Practice Areas</h5>
-          <Link href="/services">Contract Negotiation</Link>
-          <Link href="/services">Due Diligence</Link>
+          <Link href="/services">Real Estate</Link>
+          <Link href="/services">Contracts</Link>
           <Link href="/services">Title &amp; Closing</Link>
-          <Link href="/services">Entity Formation</Link>
+          <Link href="/services">Business Formation</Link>
         </div>
 
         <div className="footer-col">
-          <h5>Office</h5>
+          <h5>Service Area</h5>
           <p>
-            123 Main Street
+            Washington, DC
             <br />
-            Lancaster, PA 17602
+            Maryland · Virginia
           </p>
           <p>
-            (717) 000-0000
+            (202) 555-0000
             <br />
             office@bainbridgelaw.com
           </p>
@@ -74,7 +74,7 @@ export default function Footer() {
       <div className="footer-bottom">
         <div>© {new Date().getFullYear()} Bainbridge Law. All rights reserved.</div>
         <div className="footer-tagline">
-          Commercial real estate counsel · Lancaster County, Pennsylvania
+          Serving Washington, DC · Maryland · Virginia
         </div>
       </div>
     </footer>
