@@ -630,8 +630,11 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
   .values-grid { grid-template-columns: 1fr; gap: 0; }
   .services-grid { grid-template-columns: 1fr; gap: 32px; }
   .contact-info { grid-template-columns: 1fr; }
-  .footer-inner { grid-template-columns: 1fr; gap: 40px; }
-  .footer-tagline { text-align: left; }
+  .footer-inner { grid-template-columns: 1fr !important; gap: 40px; }
+  .footer-bottom .disclaimer { text-align: left; }
+  .approach-item { grid-template-columns: 1fr; gap: 8px; padding: 32px 20px; }
+  .approach-item::before { left: -1px; top: 32px; transform: none; }
+  .pull-quote-block { margin-top: 64px; padding: 40px 16px; }
   .step { grid-template-columns: 1fr; gap: 12px; }
   .step-body h3 { font-size: 28px; }
   .cta-band { padding: 100px var(--gutter); }
