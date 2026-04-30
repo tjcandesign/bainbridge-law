@@ -5,7 +5,7 @@ import CtaBand from "../../components/CtaBand";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact Bainbridge Law — call, email, or visit our Lancaster County office to discuss your commercial real estate matter.",
+    "Contact Bainbridge Law — serving Washington, DC, Maryland, and Virginia. Call, email, or schedule a consultation.",
 };
 
 export default function Contact() {
@@ -15,7 +15,7 @@ export default function Contact() {
         compact
         tag="Get In Touch"
         title="Contact Us"
-        subtitle="Call, email, or stop by. We respond promptly, with complete answers, regardless of where the conversation starts."
+        subtitle="Call, email, or schedule a meeting. We respond promptly, with complete answers, regardless of where the conversation starts."
       />
 
       <section className="section section-alt">
@@ -27,23 +27,23 @@ export default function Contact() {
             not leave you waiting.
           </p>
           <p>
-            Whether you have a contract under review, a closing date on the
-            calendar, or a question about a property you are considering,
-            reach out and we will tell you what we know.
+            Whether you have a contract under review, a closing on the
+            calendar, or a question about a matter you are considering, reach
+            out and we will tell you what we know.
           </p>
           <div className="contact-info">
             <div className="contact-block">
-              <div className="label">Office</div>
+              <div className="label">Service Area</div>
               <p className="value">
-                123 Main Street
+                Washington, DC
                 <br />
-                Lancaster, PA 17602
+                Maryland · Virginia
               </p>
             </div>
             <div className="contact-block">
               <div className="label">Phone</div>
               <p className="value">
-                <a href="tel:+17170000000">(717) 000-0000</a>
+                <a href="tel:+12025550000">(202) 555-0000</a>
               </p>
             </div>
             <div className="contact-block">
