@@ -410,16 +410,110 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
 .cta-band p { font-size: clamp(18px, 1.6vw, 22px); font-weight: 300; color: rgba(255,255,255,0.82); max-width: 640px; margin: 0 auto 36px; line-height: 1.55; }
 .cta-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 
-/* SECTION-IMAGE */
-.section-image { position: relative; color: #FFF; padding: 180px var(--gutter); min-height: 75vh; display: flex; align-items: center; overflow: hidden; isolation: isolate; }
-.section-image-bg { position: absolute; top: -25%; left: 0; right: 0; bottom: -25%; background: url('/images/map-capitol-hill.jpg') center / cover no-repeat; z-index: 0; filter: saturate(0.9); }
-.section-image-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15,20,40,0.55) 0%, rgba(15,20,40,0.78) 100%); z-index: 1; }
-.section-image .section-inner { position: relative; z-index: 2; }
-.section-image h2 { color: #FCFAF6; font-style: italic; font-size: clamp(40px, 5vw, 72px); max-width: 980px; }
-.section-image p { color: rgba(255,255,255,0.86); }
-.section-image .section-tag { color: var(--gold-soft); }
-.section-image .btn-outline { color: #FCFAF6; border-color: rgba(255,255,255,0.6); }
-.section-image .btn-outline:hover { background: var(--gold); border-color: var(--gold); color: var(--navy-dark); }
+/* IMAGE SPLIT — 60/40 asymmetric, framed image right */
+.image-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: 80px;
+  align-items: center;
+}
+.image-split-frame {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border: 1px solid var(--border-strong);
+  background: var(--bg-warm);
+}
+.image-split-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.88);
+}
+.image-split-frame::after {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  border: 1px solid rgba(255,255,255,0.35);
+  pointer-events: none;
+}
+
+/* PULL QUOTE — centered editorial treatment, replaces aim-card */
+.pull-quote-block {
+  max-width: 760px;
+  margin: 96px auto 0;
+  text-align: center;
+  padding: 56px 24px;
+  position: relative;
+}
+.pull-quote-block::before,
+.pull-quote-block::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 56px;
+  height: 1px;
+  background: var(--gold);
+}
+.pull-quote-block::before { top: 0; }
+.pull-quote-block::after  { bottom: 0; }
+.pull-quote-block p {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(24px, 2.5vw, 32px);
+  line-height: 1.4;
+  color: var(--sage-dark);
+  letter-spacing: -0.6px;
+  margin: 0;
+  max-width: none;
+}
+
+/* APPROACH LIST — vertical Roman-numeral numbered, hairline left rule */
+.approach-list {
+  margin-top: 64px;
+  border-left: 1px solid var(--border);
+  padding-left: 0;
+}
+.approach-item {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 56px;
+  padding: 44px 0 44px 40px;
+  position: relative;
+  border-bottom: 1px solid var(--border);
+}
+.approach-item:first-child { border-top: 1px solid var(--border); }
+.approach-item::before {
+  content: '';
+  position: absolute;
+  left: -1px;
+  top: 50%;
+  width: 3px;
+  height: 36px;
+  background: var(--gold);
+  transform: translateY(-50%);
+}
+.approach-numeral {
+  font-family: var(--serif);
+  font-size: 38px;
+  font-style: italic;
+  color: var(--gold);
+  line-height: 1;
+  letter-spacing: -0.5px;
+}
+.approach-body h3 {
+  font-family: var(--serif);
+  font-style: normal;
+  font-weight: 500;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+  letter-spacing: -0.3px;
+}
+.approach-body p {
+  margin: 0;
+  font-size: 17px;
+}
 
 /* VALUES */
 .values-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; margin-top: 16px; }
