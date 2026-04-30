@@ -5,7 +5,7 @@ import CtaBand from "../../components/CtaBand";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "About Bainbridge Law — a Lancaster County firm focused on commercial real estate counsel, with a deliberate, attorney-led approach to every transaction.",
+    "About Bainbridge Law — a DC-area firm serving Washington, DC, Maryland, and Virginia, with a deliberate, attorney-led approach to every transaction.",
 };
 
 const values = [
@@ -36,7 +36,7 @@ const phases = [
     title: "Advise",
     sub: "Counsel Grounded in Practice",
     body:
-      "We give plain-spoken advice rooted in years of commercial real estate practice. Where the law is settled, we tell you. Where it is not, we tell you that, too.",
+      "We give plain-spoken advice rooted in years of transactional practice. Where the law is settled, we tell you. Where it is not, we tell you that, too.",
   },
   {
     n: "03",
@@ -54,23 +54,29 @@ export default function About() {
         compact
         tag="About The Firm"
         title="About Bainbridge Law"
-        subtitle="A Lancaster County firm focused on commercial real estate, built around the principle that careful counsel produces lasting transactions."
+        subtitle="A DC-area firm with Lancaster County roots — built around the principle that careful counsel produces lasting transactions."
       />
 
       <section className="section">
         <div className="section-inner narrow">
           <span className="section-tag">Our Practice</span>
-          <h2>Counsel for the people who build, buy, and lease.</h2>
+          <h2>Counsel for the people who build, buy, lease, and grow.</h2>
           <p className="lede">
             Bainbridge Law represents owners, developers, investors, and
-            businesses across Lancaster County and the surrounding region.
+            businesses across Washington, DC, Maryland, and Virginia.
           </p>
           <p>
-            Our practice is intentionally focused. We don’t take on every
-            matter — we take on commercial real estate matters, and we bring
-            the depth that focus allows. Clients come to us when a transaction
-            matters, when the documents need to hold, and when they want
-            counsel who will return the call.
+            Our practice is grounded in the work, not the marketing. We take
+            on the matters where careful drafting and steady judgment make a
+            difference — and we bring the depth that comes from doing this for
+            a long time. Clients come to us when a transaction matters, when
+            the documents need to hold, and when they want counsel who will
+            return the call.
+          </p>
+          <p>
+            The firm’s roots are in Lancaster County, Pennsylvania, and that
+            background shapes how we work — plainspoken, unhurried, and
+            attentive to the people on the other side of the table.
           </p>
         </div>
       </section>
