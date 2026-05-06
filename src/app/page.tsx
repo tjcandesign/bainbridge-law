@@ -19,7 +19,7 @@ const approach = [
     numeral: "III.",
     title: "Resolve",
     body:
-      "We negotiate, draft, and close — coordinating with every party so the transaction lands cleanly and on schedule.",
+      "We negotiate, draft, and close — coordinating with every party so the matter lands cleanly and on schedule.",
   },
 ];
 
@@ -29,14 +29,14 @@ export default function Home() {
       <Hero
         tag="Attorneys at Law"
         title="Experienced counsel for complex transactions."
-        subtitle="Serving clients across Washington, DC, Maryland, and Virginia — from contract negotiation and due diligence to closing and beyond."
+        subtitle="Curtis Bainbridge represents clients in Washington, DC and Maryland — from contract negotiation and due diligence to closing and beyond."
         actions={
           <>
             <Button href="/contact" variant="primary">
               Schedule Consultation
             </Button>
             <Button href="/services" variant="secondary">
-              Our Services
+              Our Practice
             </Button>
           </>
         }
@@ -45,7 +45,7 @@ export default function Home() {
       <section className="section section-alt feature">
         <div className="section-inner narrow">
           <span className="section-tag">What We Do</span>
-          <h2>A deliberate approach to every transaction.</h2>
+          <h2>A deliberate approach to every matter.</h2>
           <p>
             We operate with the understanding that our best work is a seamless
             transaction — deals that close without surprise, terms that hold
@@ -85,33 +85,24 @@ export default function Home() {
       </section>
 
       <section className="section section-alt">
-        <div className="section-inner">
-          <div className="image-split">
-            <div>
-              <span className="section-tag">Where We Come From</span>
-              <h2>Roots in Lancaster County. Practice in the District.</h2>
-              <p>
-                The firm’s roots are in the farms and small towns of Lancaster
-                County, Pennsylvania — and that background still shapes how we
-                practice. Plainspoken, unhurried, attentive to the people on
-                the other side of the table.
-              </p>
-              <p>
-                Today the work is across the DMV, but the principle is the
-                same: careful counsel, delivered the way it ought to be.
-              </p>
-              <div style={{ marginTop: 32 }}>
-                <Button href="/about" variant="outline">
-                  About the firm
-                </Button>
-              </div>
-            </div>
-            <div className="image-split-frame">
-              <img
-                src="/images/lancaster-countryside.jpg"
-                alt="Lancaster County countryside"
-              />
-            </div>
+        <div className="section-inner editorial-mark">
+          <div className="editorial-rule" aria-hidden />
+          <div className="editorial-eyebrow">Bainbridge Law</div>
+          <h2 className="editorial-display">
+            Quiet counsel for the matters that need it most.
+          </h2>
+          <p className="editorial-lede">
+            A small practice, intentionally so — focused on the work, the
+            documents, and the people on either side of the table. Licensed in
+            the District of Columbia and Maryland.
+          </p>
+          <div className="editorial-actions">
+            <Button href="/about" variant="outline">
+              About the firm
+            </Button>
+            <Button href="/services" variant="outline">
+              Practice areas
+            </Button>
           </div>
         </div>
       </section>
