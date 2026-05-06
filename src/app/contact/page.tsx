@@ -5,7 +5,7 @@ import CtaBand from "../../components/CtaBand";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact Bainbridge Law — serving Washington, DC, Maryland, and Virginia. Call, email, or schedule a consultation.",
+    "Contact Bainbridge Law — licensed in the District of Columbia and Maryland. Call, email, or schedule a consultation.",
 };
 
 export default function Contact() {
@@ -33,24 +33,25 @@ export default function Contact() {
           </p>
           <div className="contact-info">
             <div className="contact-block">
-              <div className="label">Service Area</div>
+              <div className="label">Bar Admissions</div>
               <p className="value">
-                Washington, DC
+                District of Columbia
                 <br />
-                Maryland · Virginia
+                Maryland
               </p>
             </div>
             <div className="contact-block">
               <div className="label">Phone</div>
               <p className="value">
-                <a href="tel:+12025550000">(202) 555-0000</a>
+                <a href="tel:+12025166855">(202) 516-6855</a>
               </p>
             </div>
             <div className="contact-block">
               <div className="label">Email</div>
               <p className="value">
-                <a href="mailto:office@bainbridgelaw.com">
-                  office@bainbridgelaw.com
+                {/* TODO: replace placeholder when firm email is finalized */}
+                <a href="mailto:contact@bainbridge.law">
+                  contact@bainbridge.law
                 </a>
               </p>
             </div>
