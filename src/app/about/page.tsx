@@ -5,7 +5,7 @@ import CtaBand from "../../components/CtaBand";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "About Bainbridge Law — a DC-area firm serving Washington, DC, Maryland, and Virginia, with a deliberate, attorney-led approach to every transaction.",
+    "About Bainbridge Law — a deliberate, attorney-led practice serving the District of Columbia and Maryland.",
 };
 
 const values = [
@@ -13,7 +13,7 @@ const values = [
     label: "Value 01",
     title: "Transparency",
     body:
-      "We explain the reasoning behind every recommendation, surface risks before they become problems, and keep you informed throughout the transaction.",
+      "We explain the reasoning behind every recommendation, surface risks before they become problems, and keep you informed throughout the matter.",
   },
   {
     label: "Value 02",
@@ -29,7 +29,7 @@ const phases = [
     title: "Understand",
     sub: "Listening Before Advising",
     body:
-      "We begin by understanding your objectives, the parties involved, and the constraints that shape the deal — not by reaching for a template.",
+      "We begin by understanding your objectives, the parties involved, and the constraints that shape the matter — not by reaching for a template.",
   },
   {
     n: "02",
@@ -43,7 +43,7 @@ const phases = [
     title: "Execute",
     sub: "Closing With Care",
     body:
-      "We draft, negotiate, and close with the same attention we would bring to our own deal — coordinating every detail so the transaction lands cleanly.",
+      "We draft, negotiate, and close with the same attention we would bring to our own deal — coordinating every detail so the matter lands cleanly.",
   },
 ];
 
@@ -54,19 +54,19 @@ export default function About() {
         compact
         tag="About The Firm"
         title="About Bainbridge Law"
-        subtitle="A DC-area firm with Lancaster County roots — built around the principle that careful counsel produces lasting transactions."
+        subtitle="A deliberate, attorney-led practice — built around the principle that careful counsel produces lasting work."
       />
 
       <section className="section">
         <div className="section-inner narrow">
-          <span className="section-tag">Our Practice</span>
-          <h2>Counsel for the people who build, buy, lease, and grow.</h2>
+          <span className="section-tag">The Practice</span>
+          <h2>Counsel for the people who build, buy, and grow.</h2>
           <p className="lede">
-            Bainbridge Law represents owners, developers, investors, and
-            businesses across Washington, DC, Maryland, and Virginia.
+            Bainbridge Law represents owners, investors, businesses, and
+            individuals on the matters that move their work forward.
           </p>
           <p>
-            Our practice is grounded in the work, not the marketing. We take
+            The practice is grounded in the work, not the marketing. We take
             on the matters where careful drafting and steady judgment make a
             difference — and we bring the depth that comes from doing this for
             a long time. Clients come to us when a transaction matters, when
@@ -74,9 +74,8 @@ export default function About() {
             return the call.
           </p>
           <p>
-            The firm’s roots are in Lancaster County, Pennsylvania, and that
-            background shapes how we work — plainspoken, unhurried, and
-            attentive to the people on the other side of the table.
+            Curtis Bainbridge is licensed to practice law in the District of
+            Columbia and Maryland.
           </p>
         </div>
       </section>
