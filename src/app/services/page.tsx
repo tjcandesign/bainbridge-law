@@ -3,41 +3,26 @@ import Hero from "../../components/Hero";
 import CtaBand from "../../components/CtaBand";
 
 export const metadata: Metadata = {
-  title: "Services",
+  title: "Practice Areas",
   description:
-    "Bainbridge Law provides full-service transactional counsel across the DMV: real estate, contracts, business matters, leases, and entity formation.",
+    "Bainbridge Law represents clients in real estate, contracts, and business formation across Washington, DC and Maryland.",
 };
 
-const services = [
+const practice = [
   {
-    title: "Commercial & Residential Real Estate",
+    title: "Real Estate",
     body:
-      "Acquisitions, dispositions, financing, and development across the DMV — for owners, investors, and businesses with property at stake.",
+      "Counsel for buyers, sellers, owners, and investors. Acquisitions, dispositions, financing, leases, and the agreements that surround them — drafted and reviewed with the rigor a real estate matter deserves.",
   },
   {
-    title: "Contract Negotiation & Drafting",
+    title: "Contracts",
     body:
-      "Purchase agreements, options, letters of intent, and amendments — drafted to reflect the deal you actually negotiated.",
+      "Negotiating and drafting the documents that govern the relationship — purchase agreements, options, letters of intent, services contracts, and the full range of commercial agreements that determine how a deal performs.",
   },
   {
-    title: "Due Diligence",
+    title: "Business Formation",
     body:
-      "Title, survey, zoning, environmental, and document review, organized so you can make decisions before the contingency period closes.",
-  },
-  {
-    title: "Title Review & Closing",
-    body:
-      "We examine the title history, resolve defects before closing, and coordinate every party so the transaction lands on schedule.",
-  },
-  {
-    title: "Lease Drafting & Review",
-    body:
-      "Commercial and residential leases for landlords and tenants — with a focus on the provisions that matter when something goes wrong.",
-  },
-  {
-    title: "Business & Entity Formation",
-    body:
-      "LLCs, partnerships, and operating agreements structured around how you actually intend to hold and operate the business or property.",
+      "LLCs, partnerships, and operating agreements structured around how you actually intend to hold and operate the business. Counsel on entity choice, governance, and the documents that hold up when partners disagree.",
   },
 ];
 
@@ -46,7 +31,7 @@ const reasons = [
   "Plain-spoken counsel without legalese",
   "Clear fee arrangements before work begins",
   "Prompt response on calls and emails",
-  "Practice across DC, Maryland, and Virginia",
+  "Licensed in the District of Columbia and Maryland",
   "Coordination with your lender, broker, and accountant",
 ];
 
@@ -55,22 +40,22 @@ export default function Services() {
     <>
       <Hero
         compact
-        tag="Services"
-        title="Our Services"
-        subtitle="Full-service transactional counsel for individuals, businesses, and investors across Washington, DC, Maryland, and Virginia."
+        tag="Practice"
+        title="Practice Areas"
+        subtitle="Counsel for individuals and businesses on the matters that move their work forward — in the District of Columbia and Maryland."
       />
 
       <section className="section">
         <div className="section-inner">
           <span className="section-tag">What We Do</span>
-          <h2>Built around the transaction.</h2>
+          <h2>Three areas, practiced with depth.</h2>
           <p>
-            Every engagement is organized around the closing or the contract
-            in front of you. Our scope is focused, our deliverables are
-            specific, and our advice is yours to act on.
+            We keep the practice deliberately narrow so that every matter
+            receives the attention it deserves. Below are the areas in which
+            we represent clients.
           </p>
           <div className="services-grid">
-            {services.map((s) => (
+            {practice.map((s) => (
               <div className="service-card" key={s.title}>
                 <h3>{s.title}</h3>
                 <p>{s.body}</p>
