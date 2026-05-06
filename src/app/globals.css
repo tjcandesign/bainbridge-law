@@ -625,8 +625,6 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
   .section.feature, .section-image, .cta-band { padding-top: 120px; padding-bottom: 120px; min-height: auto; }
 }
 @media (max-width: 1024px) {
-  .image-split { grid-template-columns: 1fr; gap: 56px; }
-  .image-split-frame { aspect-ratio: 16/10; max-width: 600px; }
   .approach-item { grid-template-columns: 80px 1fr; gap: 32px; padding-left: 28px; }
   .footer-inner { grid-template-columns: 1fr 1fr !important; }
 }
