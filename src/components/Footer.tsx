@@ -43,7 +43,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <div>© {new Date().getFullYear()} Bainbridge Law.</div>
+        <div>© {new Date().getFullYear()} Bainbridge Law, PLLC.</div>
         <div className="disclaimer">
           Attorney advertising. Prior results do not guarantee a similar
           outcome.
