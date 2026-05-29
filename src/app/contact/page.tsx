@@ -49,9 +49,8 @@ export default function Contact() {
             <div className="contact-block">
               <div className="label">Email</div>
               <p className="value">
-                {/* TODO: replace placeholder when firm email is finalized */}
-                <a href="mailto:contact@bainbridge.law">
-                  contact@bainbridge.law
+                <a href="mailto:office@bainbridge.law">
+                  office@bainbridge.law
                 </a>
               </p>
             </div>
