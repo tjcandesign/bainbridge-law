@@ -36,8 +36,7 @@ export default function Footer() {
           <p>
             <a href="tel:+12025166855">(202) 516-6855</a>
             <br />
-            {/* TODO: confirm final firm email — placeholder uses bainbridge.law domain */}
-            <a href="mailto:contact@bainbridge.law">contact@bainbridge.law</a>
+            <a href="mailto:office@bainbridge.law">office@bainbridge.law</a>
           </p>
         </div>
       </div>
