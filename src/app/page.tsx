@@ -29,7 +29,7 @@ export default function Home() {
       <Hero
         tag="Attorneys at Law"
         title="Experienced counsel for complex transactions."
-        subtitle="Curtis Zeager represents clients in Washington, DC and Maryland — from contract negotiation and due diligence to closing and beyond."
+        subtitle="Our firm represents clients in Washington, DC and Maryland — from contract negotiation and due diligence to closing and beyond."
         actions={
           <>
             <Button href="/contact" variant="primary">
