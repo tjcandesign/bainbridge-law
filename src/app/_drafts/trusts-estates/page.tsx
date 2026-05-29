@@ -13,7 +13,7 @@
 //              - `src/components/Header.tsx` (`links` array)
 //              - `src/components/Footer.tsx` (Practice column)
 //              - `src/app/services/page.tsx` (add to `practice` array)
-//         3. Confirm the copy below with Curtis before launch — the draft
+//         3. Confirm the copy below with the firm before launch — the draft
 //            language is a placeholder and should be reviewed for
 //            accuracy and tone.
 // =============================================================================
