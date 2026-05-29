@@ -74,8 +74,8 @@ export default function About() {
             return the call.
           </p>
           <p>
-            Curtis Zeager is licensed to practice law in the District of
-            Columbia and Maryland.
+            Our firm represents clients in the District of Columbia and
+            Maryland.
           </p>
         </div>
       </section>
