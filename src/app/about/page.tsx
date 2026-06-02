@@ -39,7 +39,7 @@ export default async function About() {
     "Bainbridge Law represents owners, investors, businesses, and individuals on the matters that move their work forward.";
   const practiceBody =
     data?.practiceBody ??
-    "The practice is grounded in the work, not the marketing. We take on the matters where careful drafting and steady judgment make a difference — and we bring the depth that comes from doing this for a long time. Clients come to us when a transaction matters, when the documents need to hold, and when they want counsel who will return the call.\n\nOur firm represents clients in the District of Columbia and Maryland.";
+    "The practice is grounded in the work, not the marketing. We take on the matters where careful drafting and steady judgment make a difference, and we bring the depth that comes from doing this for a long time. Clients come to us when a transaction matters, when the documents need to hold, and when they want counsel who will return the call.\n\nOur firm represents clients in the District of Columbia and Maryland.";
 
   const valuesEyebrow = data?.valuesEyebrow ?? "Our Values";
   const valuesHeading =
