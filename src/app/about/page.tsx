@@ -8,7 +8,7 @@ import { paragraphs } from "../../lib/text";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "About Bainbridge Law — a deliberate, attorney-led practice serving the District of Columbia and Maryland.",
+    "About Bainbridge Law — a deliberate practice serving the District of Columbia and Maryland.",
 };
 
 const FALLBACK_VALUES = [
