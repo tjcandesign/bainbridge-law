@@ -13,7 +13,7 @@ const steps = [
     label: "Second Step",
     title: "Review",
     body:
-      "Title, survey, leases, contracts, financing — we examine every document so nothing is left to assumption.",
+      "Title, survey, leases, contracts, financing. We examine every document so nothing is left to assumption.",
   },
   {
     label: "Third Step",
