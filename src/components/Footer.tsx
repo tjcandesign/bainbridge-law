@@ -69,7 +69,7 @@ export default async function Footer() {
         <div>
           © {new Date().getFullYear()} {copyrightSuffix}
         </div>
-        <div className="disclaimer">{disclaimer}</div>
+        {disclaimer && <div className="disclaimer">{disclaimer}</div>}
       </div>
     </footer>
   );
