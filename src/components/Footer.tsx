@@ -10,11 +10,9 @@ export default async function Footer() {
 
   const phone = settings?.phone ?? "(202) 516-6855";
   const email = settings?.email ?? "office@bainbridge.law";
-  const tagline = settings?.firmTagline ?? "Attorneys at Law";
-  const disclaimer =
-    settings?.footerDisclaimer ??
-    "Attorney advertising. Prior results do not guarantee a similar outcome.";
-  const copyrightSuffix = settings?.copyrightSuffix ?? "Bainbridge Law, PLLC.";
+  const tagline = (settings?.firmTagline ?? "").trim();
+  const disclaimer = (settings?.footerDisclaimer ?? "").trim();
+  const copyrightSuffix = settings?.copyrightSuffix ?? "Bainbridge Law PLLC";
   const practiceHeading = settings?.footerPracticeHeading ?? "Practice";
   const practiceLinks = settings?.footerPracticeLinks ?? [
     "Real Estate",
