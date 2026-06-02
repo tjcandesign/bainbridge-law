@@ -7,21 +7,19 @@ export default async function CtaBand() {
     query: SITE_SETTINGS_QUERY,
   });
 
-  const heading = settings?.ctaHeading ?? "Ready to discuss your matter.";
-  const subtitle =
-    settings?.ctaSubtitle ??
-    "Whether you are negotiating a purchase, structuring a new entity, or reviewing a contract, expect a thoughtful conversation and a clear next step.";
-
   return (
     <section className="cta-band">
-      <h2>{heading}</h2>
-      <p>{subtitle}</p>
+      <h2>{settings?.ctaHeading ?? "Ready to discuss your matter."}</h2>
+      <p>
+        {settings?.ctaSubtitle ??
+          "Whether you are negotiating a purchase, structuring a new entity, or reviewing a contract, expect a thoughtful conversation and a clear next step."}
+      </p>
       <div className="cta-actions">
         <Button href="/contact" variant="primary">
-          Schedule Consultation
+          {settings?.ctaPrimaryLabel ?? "Schedule Consultation"}
         </Button>
         <Button href="/services" variant="secondary">
-          Practice Areas
+          {settings?.ctaSecondaryLabel ?? "Practice Areas"}
         </Button>
       </div>
     </section>
