@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import Hero from "../../components/Hero";
 import CtaBand from "../../components/CtaBand";
+import { sanityFetch } from "../../sanity/lib/client";
+import {
+  PAGE_QUERY,
+  PRACTICE_AREAS_QUERY,
+  type PageContent,
+  type PracticeArea,
+} from "../../sanity/lib/queries";
 
 export const metadata: Metadata = {
   title: "Practice Areas",
@@ -8,21 +15,27 @@ export const metadata: Metadata = {
     "Bainbridge Law represents clients in real estate, contracts, and business formation across Washington, DC and Maryland.",
 };
 
-const practice = [
+const fallbackPractice: PracticeArea[] = [
   {
+    _id: "fallback-1",
     title: "Real Estate",
     body:
       "Counsel for buyers, sellers, owners, and investors. Acquisitions, dispositions, financing, leases, and the agreements that surround them — drafted and reviewed with the rigor a real estate matter deserves.",
+    order: 10,
   },
   {
+    _id: "fallback-2",
     title: "Contracts",
     body:
       "Negotiating and drafting the documents that govern the relationship — purchase agreements, options, letters of intent, services contracts, and the full range of commercial agreements that determine how a deal performs.",
+    order: 20,
   },
   {
+    _id: "fallback-3",
     title: "Business Formation",
     body:
       "LLCs, partnerships, and operating agreements structured around how you actually intend to hold and operate the business. Counsel on entity choice, governance, and the documents that hold up when partners disagree.",
+    order: 30,
   },
 ];
 
@@ -35,15 +48,29 @@ const reasons = [
   "Coordination with your lender, broker, and accountant",
 ];
 
-export default function Services() {
+export default async function Services() {
+  const [page, practiceFromCms] = await Promise.all([
+    sanityFetch<PageContent>({
+      query: PAGE_QUERY,
+      params: { slug: "practice" },
+    }),
+    sanityFetch<PracticeArea[]>({ query: PRACTICE_AREAS_QUERY }),
+  ]);
+
+  const eyebrow = page?.heroEyebrow ?? "Practice";
+  const heading = page?.heroHeading ?? "Practice Areas";
+  const subtitle =
+    page?.heroSubtitle ??
+    "Counsel for individuals and businesses on the matters that move their work forward — in the District of Columbia and Maryland.";
+
+  const practice =
+    practiceFromCms && practiceFromCms.length > 0
+      ? practiceFromCms
+      : fallbackPractice;
+
   return (
     <>
-      <Hero
-        compact
-        tag="Practice"
-        title="Practice Areas"
-        subtitle="Counsel for individuals and businesses on the matters that move their work forward — in the District of Columbia and Maryland."
-      />
+      <Hero compact tag={eyebrow} title={heading} subtitle={subtitle} />
 
       <section className="section">
         <div className="section-inner">
@@ -56,7 +83,7 @@ export default function Services() {
           </p>
           <div className="services-grid">
             {practice.map((s) => (
-              <div className="service-card" key={s.title}>
+              <div className="service-card" key={s._id}>
                 <h3>{s.title}</h3>
                 <p>{s.body}</p>
               </div>
