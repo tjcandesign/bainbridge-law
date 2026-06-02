@@ -34,7 +34,7 @@ export default async function Footer() {
           <span style={{ color: "#FFFFFF" }}>Bainbridge</span>{" "}
           <span style={{ color: "var(--gold-soft)" }}>Law</span>
         </div>
-        <div className="footer-mark-tag">{tagline}</div>
+        {tagline && <div className="footer-mark-tag">{tagline}</div>}
       </div>
 
       <div className="footer-inner">
