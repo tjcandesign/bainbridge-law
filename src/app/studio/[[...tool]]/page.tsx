@@ -1,14 +1,13 @@
+"use client";
+
 // Embed the Sanity Studio at /studio.
-// The actual <NextStudio /> render is in Studio.tsx — that file is a client
-// component, which avoids SSR'ing Sanity's React-context tree (Sanity needs
-// to run in the browser, not server-rendered).
+//
+// This page is intentionally a client component with `dynamic(..., { ssr: false })`
+// because Sanity's runtime (used inside sanity.config.ts via `defineConfig`)
+// calls React.createContext at module-load time. That throws under the
+// server-side React runtime used during Next.js's prerender / data-collection
+// pass. Loading the Studio purely client-side avoids that entirely.
 import dynamic from "next/dynamic";
-
-export { metadata, viewport } from "next-sanity/studio";
-
-// Avoid prerendering this route at build time — Studio only runs client-side.
-export const dynamicParams = true;
-export const revalidate = 0;
 
 const Studio = dynamic(() => import("./Studio"), { ssr: false });
 
