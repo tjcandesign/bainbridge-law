@@ -13,7 +13,7 @@ import { withLineBreaks } from "../../lib/text";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact Bainbridge Law — licensed in the District of Columbia and Maryland. Call, email, or schedule a consultation.",
+    "Contact Bainbridge Law, licensed in the District of Columbia and Maryland. Call, email, or schedule a consultation.",
 };
 
 export default async function Contact() {
