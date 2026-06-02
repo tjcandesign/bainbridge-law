@@ -3,11 +3,12 @@ import Hero from "../../components/Hero";
 import CtaBand from "../../components/CtaBand";
 import { sanityFetch } from "../../sanity/lib/client";
 import {
-  PAGE_QUERY,
+  CONTACT_PAGE_QUERY,
   SITE_SETTINGS_QUERY,
-  type PageContent,
+  type ContactPage,
   type SiteSettings,
 } from "../../sanity/lib/queries";
+import { withLineBreaks } from "../../lib/text";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -16,19 +17,31 @@ export const metadata: Metadata = {
 };
 
 export default async function Contact() {
-  const [page, settings] = await Promise.all([
-    sanityFetch<PageContent>({
-      query: PAGE_QUERY,
-      params: { slug: "contact" },
-    }),
+  const [data, settings] = await Promise.all([
+    sanityFetch<ContactPage>({ query: CONTACT_PAGE_QUERY }),
     sanityFetch<SiteSettings>({ query: SITE_SETTINGS_QUERY }),
   ]);
 
-  const eyebrow = page?.heroEyebrow ?? "Get In Touch";
-  const heading = page?.heroHeading ?? "Contact Us";
-  const subtitle =
-    page?.heroSubtitle ??
+  const heroEyebrow = data?.hero?.eyebrow ?? "Get In Touch";
+  const heroHeading = data?.hero?.heading ?? "Contact Us";
+  const heroSubtitle =
+    data?.hero?.subtitle ??
     "Call, email, or schedule a meeting. We respond promptly, with complete answers, regardless of where the conversation starts.";
+
+  const sectionEyebrow = data?.sectionEyebrow ?? "How To Reach Us";
+  const sectionHeading =
+    data?.sectionHeading ?? "Quick, straightforward, always personable.";
+  const sectionLede =
+    data?.sectionLede ??
+    "However you prefer to connect, we will meet you there — and we will not leave you waiting.";
+  const sectionBody =
+    data?.sectionBody ??
+    "Whether you have a contract under review, a closing on the calendar, or a question about a matter you are considering, reach out and we will tell you what we know.";
+
+  const labelBar = data?.labelBar ?? "Bar Admissions";
+  const labelPhone = data?.labelPhone ?? "Phone";
+  const labelEmail = data?.labelEmail ?? "Email";
+  const labelHours = data?.labelHours ?? "Hours";
 
   const barAdmissions =
     settings?.barAdmissions ?? "District of Columbia\nMaryland";
@@ -41,55 +54,39 @@ export default async function Contact() {
 
   return (
     <>
-      <Hero compact tag={eyebrow} title={heading} subtitle={subtitle} />
+      <Hero
+        compact
+        tag={heroEyebrow}
+        title={heroHeading}
+        subtitle={heroSubtitle}
+      />
 
       <section className="section section-alt">
         <div className="section-inner">
-          <span className="section-tag">How To Reach Us</span>
-          <h2>Quick, straightforward, always personable.</h2>
-          <p className="lede">
-            However you prefer to connect, we will meet you there — and we will
-            not leave you waiting.
-          </p>
-          <p>
-            Whether you have a contract under review, a closing on the
-            calendar, or a question about a matter you are considering, reach
-            out and we will tell you what we know.
-          </p>
+          <span className="section-tag">{sectionEyebrow}</span>
+          <h2>{sectionHeading}</h2>
+          <p className="lede">{sectionLede}</p>
+          <p>{sectionBody}</p>
           <div className="contact-info">
             <div className="contact-block">
-              <div className="label">Bar Admissions</div>
-              <p className="value">
-                {barAdmissions.split("\n").map((line, i, all) => (
-                  <span key={i}>
-                    {line}
-                    {i < all.length - 1 && <br />}
-                  </span>
-                ))}
-              </p>
+              <div className="label">{labelBar}</div>
+              <p className="value">{withLineBreaks(barAdmissions)}</p>
             </div>
             <div className="contact-block">
-              <div className="label">Phone</div>
+              <div className="label">{labelPhone}</div>
               <p className="value">
                 <a href={telHref}>{phone}</a>
               </p>
             </div>
             <div className="contact-block">
-              <div className="label">Email</div>
+              <div className="label">{labelEmail}</div>
               <p className="value">
                 <a href={`mailto:${email}`}>{email}</a>
               </p>
             </div>
             <div className="contact-block">
-              <div className="label">Hours</div>
-              <p className="value">
-                {hours.split("\n").map((line, i, all) => (
-                  <span key={i}>
-                    {line}
-                    {i < all.length - 1 && <br />}
-                  </span>
-                ))}
-              </p>
+              <div className="label">{labelHours}</div>
+              <p className="value">{withLineBreaks(hours)}</p>
             </div>
           </div>
         </div>
