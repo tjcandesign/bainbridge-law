@@ -1,6 +1,22 @@
 import Link from "next/link";
+import { sanityFetch } from "../sanity/lib/client";
+import { SITE_SETTINGS_QUERY, type SiteSettings } from "../sanity/lib/queries";
 
-export default function Footer() {
+export default async function Footer() {
+  const settings = await sanityFetch<SiteSettings>({
+    query: SITE_SETTINGS_QUERY,
+  });
+
+  const phone = settings?.phone ?? "(202) 516-6855";
+  const email = settings?.email ?? "office@bainbridge.law";
+  const tagline = settings?.firmTagline ?? "Attorneys at Law";
+  const disclaimer =
+    settings?.footerDisclaimer ??
+    "Attorney advertising. Prior results do not guarantee a similar outcome.";
+
+  const telHref = `tel:+${phone.replace(/\D/g, "")}`;
+  const mailHref = `mailto:${email}`;
+
   return (
     <footer className="footer">
       <div className="footer-mark">
@@ -8,7 +24,7 @@ export default function Footer() {
           <span style={{ color: "#FFFFFF" }}>Bainbridge</span>{" "}
           <span style={{ color: "var(--gold-soft)" }}>Law</span>
         </div>
-        <div className="footer-mark-tag">Attorneys at Law</div>
+        <div className="footer-mark-tag">{tagline}</div>
       </div>
 
       <div className="footer-inner">
@@ -34,19 +50,16 @@ export default function Footer() {
             Maryland
           </p>
           <p>
-            <a href="tel:+12025166855">(202) 516-6855</a>
+            <a href={telHref}>{phone}</a>
             <br />
-            <a href="mailto:office@bainbridge.law">office@bainbridge.law</a>
+            <a href={mailHref}>{email}</a>
           </p>
         </div>
       </div>
 
       <div className="footer-bottom">
         <div>© {new Date().getFullYear()} Bainbridge Law, PLLC.</div>
-        <div className="disclaimer">
-          Attorney advertising. Prior results do not guarantee a similar
-          outcome.
-        </div>
+        <div className="disclaimer">{disclaimer}</div>
       </div>
     </footer>
   );
