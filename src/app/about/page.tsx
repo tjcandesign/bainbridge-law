@@ -19,7 +19,7 @@ const FALLBACK_VALUES = [
 const FALLBACK_PHASES = [
   { _key: "1", number: "01", title: "Understand", subhead: "Listening Before Advising", body: "We begin by understanding your objectives, the parties involved, and the constraints that shape the matter. Not by reaching for a template." },
   { _key: "2", number: "02", title: "Advise", subhead: "Counsel Grounded in Practice", body: "We give plain-spoken advice rooted in years of transactional practice. Where the law is settled, we tell you. Where it is not, we tell you that, too." },
-  { _key: "3", number: "03", title: "Execute", subhead: "Closing With Care", body: "We draft, negotiate, and close with the same attention we would bring to our own deal — coordinating every detail so the matter lands cleanly." },
+  { _key: "3", number: "03", title: "Execute", subhead: "Closing With Care", body: "We draft, negotiate, and close with the same attention we would bring to our own deal, coordinating every detail so the matter lands cleanly." },
 ];
 
 export default async function About() {
