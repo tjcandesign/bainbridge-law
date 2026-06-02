@@ -19,7 +19,7 @@ export default async function Home() {
     data?.hero?.heading ?? "Experienced counsel for complex transactions.";
   const heroSubtitle =
     data?.hero?.subtitle ??
-    "Our firm represents clients in Washington, DC and Maryland — from contract negotiation and due diligence to closing and beyond.";
+    "Our firm represents clients in Washington, DC and Maryland. From contract negotiation and due diligence to closing and beyond.";
   const heroPrimary = data?.heroPrimaryLabel ?? "Schedule Consultation";
   const heroSecondary = data?.heroSecondaryLabel ?? "Our Practice";
 
