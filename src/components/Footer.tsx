@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { sanityFetch } from "../sanity/lib/client";
 import { SITE_SETTINGS_QUERY, type SiteSettings } from "../sanity/lib/queries";
+import { withLineBreaks } from "../lib/text";
 
 export default async function Footer() {
   const settings = await sanityFetch<SiteSettings>({
@@ -13,6 +14,17 @@ export default async function Footer() {
   const disclaimer =
     settings?.footerDisclaimer ??
     "Attorney advertising. Prior results do not guarantee a similar outcome.";
+  const copyrightSuffix = settings?.copyrightSuffix ?? "Bainbridge Law, PLLC.";
+  const practiceHeading = settings?.footerPracticeHeading ?? "Practice";
+  const practiceLinks = settings?.footerPracticeLinks ?? [
+    "Real Estate",
+    "Contracts",
+    "Business Formation",
+  ];
+  const firmHeading = settings?.footerFirmHeading ?? "Firm";
+  const reachUsHeading = settings?.footerReachUsHeading ?? "Reach Us";
+  const serviceArea =
+    settings?.footerServiceArea ?? "District of Columbia\nMaryland";
 
   const telHref = `tel:+${phone.replace(/\D/g, "")}`;
   const mailHref = `mailto:${email}`;
@@ -29,26 +41,24 @@ export default async function Footer() {
 
       <div className="footer-inner">
         <div className="footer-col">
-          <h5>Practice</h5>
-          <Link href="/services">Real Estate</Link>
-          <Link href="/services">Contracts</Link>
-          <Link href="/services">Business Formation</Link>
+          <h5>{practiceHeading}</h5>
+          {practiceLinks.map((label) => (
+            <Link key={label} href="/services">
+              {label}
+            </Link>
+          ))}
         </div>
 
         <div className="footer-col">
-          <h5>Firm</h5>
+          <h5>{firmHeading}</h5>
           <Link href="/about">About</Link>
           <Link href="/services">Practice Areas</Link>
           <Link href="/contact">Contact</Link>
         </div>
 
         <div className="footer-col">
-          <h5>Reach Us</h5>
-          <p>
-            District of Columbia
-            <br />
-            Maryland
-          </p>
+          <h5>{reachUsHeading}</h5>
+          <p>{withLineBreaks(serviceArea)}</p>
           <p>
             <a href={telHref}>{phone}</a>
             <br />
@@ -58,7 +68,9 @@ export default async function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <div>© {new Date().getFullYear()} Bainbridge Law, PLLC.</div>
+        <div>
+          © {new Date().getFullYear()} {copyrightSuffix}
+        </div>
         <div className="disclaimer">{disclaimer}</div>
       </div>
     </footer>
