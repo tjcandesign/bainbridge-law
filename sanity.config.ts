@@ -1,7 +1,7 @@
 import { defineConfig } from "sanity";
 import { structureTool } from "sanity/structure";
 import { visionTool } from "@sanity/vision";
-import { schemaTypes } from "./src/sanity/schemas";
+import { schemaTypes, SINGLETON_TYPES } from "./src/sanity/schemas";
 import { structure } from "./src/sanity/structure";
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "qnaco2kw";
@@ -21,17 +21,19 @@ export default defineConfig({
   ],
   schema: {
     types: schemaTypes,
-    // Site Settings is a singleton — hide the "Create new" action for it.
+    // Hide "Create new" for singletons.
     templates: (templates) =>
-      templates.filter(({ schemaType }) => schemaType !== "siteSettings"),
+      templates.filter(({ schemaType }) => !SINGLETON_TYPES.has(schemaType)),
   },
   document: {
-    // Remove duplicate / delete actions for the singleton.
+    // Hide duplicate / delete / unpublish for singletons.
     actions: (input, context) =>
-      context.schemaType === "siteSettings"
+      SINGLETON_TYPES.has(context.schemaType)
         ? input.filter(
             ({ action }) =>
-              action !== "duplicate" && action !== "delete" && action !== "unpublish",
+              action !== "duplicate" &&
+              action !== "delete" &&
+              action !== "unpublish",
           )
         : input,
   },
