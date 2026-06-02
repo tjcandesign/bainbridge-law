@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Hero from "../../components/Hero";
 import CtaBand from "../../components/CtaBand";
+import { sanityFetch } from "../../sanity/lib/client";
+import { PAGE_QUERY, type PageContent } from "../../sanity/lib/queries";
 
 export const metadata: Metadata = {
   title: "About",
@@ -47,15 +49,21 @@ const phases = [
   },
 ];
 
-export default function About() {
+export default async function About() {
+  const page = await sanityFetch<PageContent>({
+    query: PAGE_QUERY,
+    params: { slug: "about" },
+  });
+
+  const eyebrow = page?.heroEyebrow ?? "About The Firm";
+  const heading = page?.heroHeading ?? "About Bainbridge Law";
+  const subtitle =
+    page?.heroSubtitle ??
+    "A deliberate, attorney-led practice — built around the principle that careful counsel produces lasting work.";
+
   return (
     <>
-      <Hero
-        compact
-        tag="About The Firm"
-        title="About Bainbridge Law"
-        subtitle="A deliberate, attorney-led practice — built around the principle that careful counsel produces lasting work."
-      />
+      <Hero compact tag={eyebrow} title={heading} subtitle={subtitle} />
 
       <section className="section">
         <div className="section-inner narrow">
