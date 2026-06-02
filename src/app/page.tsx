@@ -1,6 +1,8 @@
 import Hero from "../components/Hero";
 import Button from "../components/Button";
 import CtaBand from "../components/CtaBand";
+import { sanityFetch } from "../sanity/lib/client";
+import { PAGE_QUERY, type PageContent } from "../sanity/lib/queries";
 
 const approach = [
   {
@@ -23,13 +25,25 @@ const approach = [
   },
 ];
 
-export default function Home() {
+export default async function Home() {
+  const page = await sanityFetch<PageContent>({
+    query: PAGE_QUERY,
+    params: { slug: "home" },
+  });
+
+  const eyebrow = page?.heroEyebrow ?? "Attorneys at Law";
+  const heading =
+    page?.heroHeading ?? "Experienced counsel for complex transactions.";
+  const subtitle =
+    page?.heroSubtitle ??
+    "Our firm represents clients in Washington, DC and Maryland — from contract negotiation and due diligence to closing and beyond.";
+
   return (
     <>
       <Hero
-        tag="Attorneys at Law"
-        title="Experienced counsel for complex transactions."
-        subtitle="Our firm represents clients in Washington, DC and Maryland — from contract negotiation and due diligence to closing and beyond."
+        tag={eyebrow}
+        title={heading}
+        subtitle={subtitle}
         actions={
           <>
             <Button href="/contact" variant="primary">
