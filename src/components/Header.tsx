@@ -10,7 +10,11 @@ const links = [
   { href: "/contact", label: "Contact" },
 ];
 
-export default function Header() {
+type Props = {
+  ctaLabel?: string;
+};
+
+export default function Header({ ctaLabel = "Schedule Consultation" }: Props) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
@@ -39,7 +43,7 @@ export default function Header() {
           </Link>
         ))}
         <Link href="/contact" className="cta" onClick={() => setOpen(false)}>
-          Schedule Consultation
+          {ctaLabel}
         </Link>
       </nav>
     </header>
