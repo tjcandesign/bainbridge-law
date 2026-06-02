@@ -29,7 +29,7 @@ export default async function About() {
   const heroHeading = data?.hero?.heading ?? "About Bainbridge Law";
   const heroSubtitle =
     data?.hero?.subtitle ??
-    "A deliberate practice — built around the principle that careful counsel produces lasting work.";
+    "A deliberate practice, built around the principle that careful counsel produces lasting work.";
 
   const practiceEyebrow = data?.practiceEyebrow ?? "The Practice";
   const practiceHeading =
