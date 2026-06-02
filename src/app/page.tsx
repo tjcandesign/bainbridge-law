@@ -46,7 +46,7 @@ export default async function Home() {
     data?.editorialHeading ?? "Quiet counsel for the matters that need it most.";
   const editorialLede =
     data?.editorialLede ??
-    "A small practice, intentionally so — focused on the work, the documents, and the people on either side of the table. Licensed in the District of Columbia and Maryland.";
+    "A small practice, intentionally so. Focused on the work, the documents, and the people on either side of the table. Licensed in the District of Columbia and Maryland.";
   const editorialPrimary = data?.editorialPrimaryLabel ?? "About the firm";
   const editorialSecondary = data?.editorialSecondaryLabel ?? "Practice areas";
 
