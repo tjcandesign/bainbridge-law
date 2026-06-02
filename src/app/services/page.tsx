@@ -40,7 +40,7 @@ export default async function Practice() {
   const heroHeading = data?.hero?.heading ?? "Practice Areas";
   const heroSubtitle =
     data?.hero?.subtitle ??
-    "Counsel for individuals and businesses on the matters that move their work forward — in the District of Columbia and Maryland.";
+    "Counsel for individuals and businesses on the matters that move their work forward, in the District of Columbia and Maryland.";
 
   const whatEyebrow = data?.whatWeDoEyebrow ?? "What We Do";
   const whatHeading =
