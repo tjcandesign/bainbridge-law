@@ -48,7 +48,7 @@ export default async function Contact() {
   const phone = settings?.phone ?? "(202) 516-6855";
   const email = settings?.email ?? "office@bainbridge.law";
   const hours =
-    settings?.hours ?? "Mon–Fri 9:00–5:00\nBy appointment otherwise";
+    settings?.hours ?? "Mon–Fri 9:00–5:00\nBy appointment";
 
   const telHref = `tel:+${phone.replace(/\D/g, "")}`;
 
