@@ -16,8 +16,8 @@ export const metadata: Metadata = {
 };
 
 const FALLBACK_PRACTICE: PracticeArea[] = [
-  { _id: "f1", title: "Real Estate", body: "Counsel for buyers, sellers, owners, and investors. Acquisitions, dispositions, financing, leases, and the agreements that surround them — drafted and reviewed with the rigor a real estate matter deserves.", order: 10 },
-  { _id: "f2", title: "Contracts", body: "Negotiating and drafting the documents that govern the relationship — purchase agreements, options, letters of intent, services contracts, and the full range of commercial agreements that determine how a deal performs.", order: 20 },
+  { _id: "f1", title: "Real Estate", body: "Counsel for buyers, sellers, owners, and investors. Acquisitions, dispositions, financing, leases, and the agreements that surround them, drafted and reviewed with the rigor a real estate matter deserves.", order: 10 },
+  { _id: "f2", title: "Contracts", body: "Negotiating and drafting the documents that govern the relationship. Purchase agreements, options, letters of intent, services contracts, and the full range of commercial agreements that determine how a deal performs.", order: 20 },
   { _id: "f3", title: "Business Formation", body: "LLCs, partnerships, and operating agreements structured around how you actually intend to hold and operate the business. Counsel on entity choice, governance, and the documents that hold up when partners disagree.", order: 30 },
 ];
 
