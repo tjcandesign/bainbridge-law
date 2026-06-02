@@ -28,7 +28,7 @@ export default async function Home() {
     data?.featureHeading ?? "A deliberate approach to every matter.";
   const featureBody =
     data?.featureBody ??
-    "We operate with the understanding that our best work is a seamless transaction — deals that close without surprise, terms that hold up under scrutiny, parties who feel informed at every step.\n\nWe handle the details with care, treat people with respect, and let the quality of the work speak for itself.";
+    "We operate with the understanding that our best work is a seamless transaction. Deals that close without surprise, terms that hold up under scrutiny, parties who feel informed at every step.\n\nWe handle the details with care, treat people with respect, and let the quality of the work speak for itself.";
   const pullQuote =
     data?.pullQuote ??
     "Our aim is the highest quality result for every matter — assuring that clients are informed, comfortable through the process, and confident at the close.";
