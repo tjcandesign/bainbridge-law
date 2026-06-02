@@ -6,9 +6,9 @@ import { HOME_PAGE_QUERY, type HomePage } from "../sanity/lib/queries";
 import { paragraphs } from "../lib/text";
 
 const FALLBACK_STEPS = [
-  { _key: "1", numeral: "I.", title: "Listen", body: "We start by understanding the matter — the parties, the timing, and what success looks like for you. No templates, no assumptions." },
-  { _key: "2", numeral: "II.", title: "Examine", body: "Contracts, title, financing, leases — every document gets read with the same attention we would bring to our own deal." },
-  { _key: "3", numeral: "III.", title: "Resolve", body: "We negotiate, draft, and close — coordinating with every party so the matter lands cleanly and on schedule." },
+  { _key: "1", numeral: "I.", title: "Listen", body: "We start by understanding the matter. The parties, the timing, and what success looks like for you. No templates, no assumptions." },
+  { _key: "2", numeral: "II.", title: "Examine", body: "Contracts, title, financing, leases. Every document gets read with the same attention we would bring to our own deal." },
+  { _key: "3", numeral: "III.", title: "Resolve", body: "We negotiate, draft, and close, coordinating with every party so the matter lands cleanly and on schedule." },
 ];
 
 export default async function Home() {
