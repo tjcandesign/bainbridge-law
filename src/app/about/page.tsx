@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 const FALLBACK_VALUES = [
   { _key: "1", label: "Value 01", title: "Transparency", body: "We explain the reasoning behind every recommendation, surface risks before they become problems, and keep you informed throughout the matter." },
-  { _key: "2", label: "Value 02", title: "Accessibility", body: "We respond promptly with complete, straightforward answers — by phone, email, or in person — so you can make informed decisions without delay." },
+  { _key: "2", label: "Value 02", title: "Accessibility", body: "We respond promptly with complete, straightforward answers, whether by phone, email, or in person, so you can make informed decisions without delay." },
 ];
 
 const FALLBACK_PHASES = [
