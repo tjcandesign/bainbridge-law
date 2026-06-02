@@ -14,7 +14,7 @@ const FALLBACK_STEPS = [
 export default async function Home() {
   const data = await sanityFetch<HomePage>({ query: HOME_PAGE_QUERY });
 
-  const heroEyebrow = data?.hero?.eyebrow ?? "Attorneys at Law";
+  const heroEyebrow = data?.hero?.eyebrow ?? "Attorney at Law";
   const heroHeading =
     data?.hero?.heading ?? "Experienced counsel for complex transactions.";
   const heroSubtitle =
