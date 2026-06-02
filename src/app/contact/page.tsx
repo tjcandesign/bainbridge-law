@@ -33,7 +33,7 @@ export default async function Contact() {
     data?.sectionHeading ?? "Quick, straightforward, always personable.";
   const sectionLede =
     data?.sectionLede ??
-    "However you prefer to connect, we will meet you there — and we will not leave you waiting.";
+    "However you prefer to connect, we will meet you there, and we will not leave you waiting.";
   const sectionBody =
     data?.sectionBody ??
     "Whether you have a contract under review, a closing on the calendar, or a question about a matter you are considering, reach out and we will tell you what we know.";
