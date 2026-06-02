@@ -1,11 +1,20 @@
 import type { StructureResolver } from "sanity/structure";
-import { CogIcon, DocumentIcon, TagIcon } from "@sanity/icons";
+import {
+  CogIcon,
+  HomeIcon,
+  UserIcon,
+  TagIcon,
+  EnvelopeIcon,
+  DocumentsIcon,
+} from "@sanity/icons";
 
-// Custom Studio structure:
-//  - Site Settings appears as a single editable item (singleton-style — we
-//    intentionally don't pin to a fixed _id so the existing seeded document
-//    is the one that opens).
-//  - Pages and Practice Areas as regular document lists below.
+// Each "page" type is a singleton — Studio opens the existing doc directly
+// rather than showing a list with a "Create new" action.
+const singletonChild = (S: Parameters<StructureResolver>[0], type: string) =>
+  S.documentTypeList(type)
+    .title(type)
+    .child((id) => S.document().documentId(id).schemaType(type));
+
 export const structure: StructureResolver = (S) =>
   S.list()
     .title("Content")
@@ -13,27 +22,28 @@ export const structure: StructureResolver = (S) =>
       S.listItem()
         .title("Site Settings")
         .icon(CogIcon)
-        .child(
-          S.documentTypeList("siteSettings")
-            .title("Site Settings")
-            .child((documentId) =>
-              S.document()
-                .documentId(documentId)
-                .schemaType("siteSettings"),
-            ),
-        ),
+        .child(singletonChild(S, "siteSettings")),
       S.divider(),
       S.listItem()
-        .title("Pages")
-        .icon(DocumentIcon)
-        .child(
-          S.documentTypeList("page")
-            .title("Pages")
-            .filter('_type == "page"'),
-        ),
+        .title("Home Page")
+        .icon(HomeIcon)
+        .child(singletonChild(S, "homePage")),
+      S.listItem()
+        .title("About Page")
+        .icon(UserIcon)
+        .child(singletonChild(S, "aboutPage")),
+      S.listItem()
+        .title("Practice Page")
+        .icon(TagIcon)
+        .child(singletonChild(S, "practicePage")),
+      S.listItem()
+        .title("Contact Page")
+        .icon(EnvelopeIcon)
+        .child(singletonChild(S, "contactPage")),
+      S.divider(),
       S.listItem()
         .title("Practice Areas")
-        .icon(TagIcon)
+        .icon(DocumentsIcon)
         .child(
           S.documentTypeList("practiceArea")
             .title("Practice Areas")
