@@ -16,7 +16,7 @@ export default async function Home() {
 
   const heroEyebrow = data?.hero?.eyebrow ?? "Attorney at Law";
   const heroHeading =
-    data?.hero?.heading ?? "Experienced counsel for complex transactions.";
+    data?.hero?.heading ?? "Experienced counsel for transactions that matter.";
   const heroSubtitle =
     data?.hero?.subtitle ??
     "Our firm represents clients in Washington, DC and Maryland. From contract negotiation and due diligence to closing and beyond.";
