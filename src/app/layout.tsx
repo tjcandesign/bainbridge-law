@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: "%s | Bainbridge Law",
   },
   description:
-    "Experienced counsel for complex transactions in the District of Columbia and Maryland.",
+    "Experienced counsel for transactions that matter. Serving the District of Columbia and Maryland.",
 };
 
 export default function RootLayout({
